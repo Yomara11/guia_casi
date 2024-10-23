@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 11 Power BI | Guía Didáctica de Finanzas</title>
+  <meta name="description" content="<p>This is a minimal example of using the bookdown package to write a book.
+set in the _output.yml file.
+The HTML output format for this example is bookdown::gitbook,</p>" />
+  <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 11 Power BI | Guía Didáctica de Finanzas" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="<p>This is a minimal example of using the bookdown package to write a book.
+set in the _output.yml file.
+The HTML output format for this example is bookdown::gitbook,</p>" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 11 Power BI | Guía Didáctica de Finanzas" />
+  
+  <meta name="twitter:description" content="<p>This is a minimal example of using the bookdown package to write a book.
+set in the _output.yml file.
+The HTML output format for this example is bookdown::gitbook,</p>" />
+  
+
+<meta name="author" content="Econ. José Vicente Ordoóñez, Econ. Kevin Jiménez, Econ. Yomara Ruiz" />
+
+
+<meta name="date" content="2024-10-23" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="flourish.html"/>
+<link rel="next" href="plataforma-r-studio.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Guía didática de finanzas</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Presentación</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#ejemplo"><i class="fa fa-check"></i><b>1.1</b> Ejemplo</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#ejemplo-1"><i class="fa fa-check"></i><b>1.2</b> Ejemplo 1</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#ejemplo-2"><i class="fa fa-check"></i><b>1.3</b> Ejemplo 2</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#definición"><i class="fa fa-check"></i><b>1.4</b> Definición</a></li>
+<li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#ejemplo-1-1"><i class="fa fa-check"></i><b>1.5</b> Ejemplo 1</a></li>
+<li class="chapter" data-level="1.6" data-path="index.html"><a href="index.html#ejemplo-2-1"><i class="fa fa-check"></i><b>1.6</b> Ejemplo 2</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="hello-bookdown.html"><a href="hello-bookdown.html"><i class="fa fa-check"></i><b>2</b> Hello bookdown</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="hello-bookdown.html"><a href="hello-bookdown.html#a-section"><i class="fa fa-check"></i><b>2.1</b> A section</a>
+<ul>
+<li class="chapter" data-level="" data-path="hello-bookdown.html"><a href="hello-bookdown.html#an-unnumbered-section"><i class="fa fa-check"></i>An unnumbered section</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="cross.html"><a href="cross.html"><i class="fa fa-check"></i><b>3</b> Cross-references</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="cross.html"><a href="cross.html#chapters-and-sub-chapters"><i class="fa fa-check"></i><b>3.1</b> Chapters and sub-chapters</a></li>
+<li class="chapter" data-level="3.2" data-path="cross.html"><a href="cross.html#captioned-figures-and-tables"><i class="fa fa-check"></i><b>3.2</b> Captioned figures and tables</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="parts.html"><a href="parts.html"><i class="fa fa-check"></i><b>4</b> Parts</a></li>
+<li class="chapter" data-level="5" data-path="footnotes-and-citations.html"><a href="footnotes-and-citations.html"><i class="fa fa-check"></i><b>5</b> Footnotes and citations</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="footnotes-and-citations.html"><a href="footnotes-and-citations.html#footnotes"><i class="fa fa-check"></i><b>5.1</b> Footnotes</a></li>
+<li class="chapter" data-level="5.2" data-path="footnotes-and-citations.html"><a href="footnotes-and-citations.html#citations"><i class="fa fa-check"></i><b>5.2</b> Citations</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="blocks.html"><a href="blocks.html"><i class="fa fa-check"></i><b>6</b> Blocks</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="blocks.html"><a href="blocks.html#equations"><i class="fa fa-check"></i><b>6.1</b> Equations</a></li>
+<li class="chapter" data-level="6.2" data-path="blocks.html"><a href="blocks.html#theorems-and-proofs"><i class="fa fa-check"></i><b>6.2</b> Theorems and proofs</a></li>
+<li class="chapter" data-level="6.3" data-path="blocks.html"><a href="blocks.html#callout-blocks"><i class="fa fa-check"></i><b>6.3</b> Callout blocks</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="sharing-your-book.html"><a href="sharing-your-book.html"><i class="fa fa-check"></i><b>7</b> Sharing your book</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="sharing-your-book.html"><a href="sharing-your-book.html#publishing"><i class="fa fa-check"></i><b>7.1</b> Publishing</a></li>
+<li class="chapter" data-level="7.2" data-path="sharing-your-book.html"><a href="sharing-your-book.html#pages"><i class="fa fa-check"></i><b>7.2</b> 404 pages</a></li>
+<li class="chapter" data-level="7.3" data-path="sharing-your-book.html"><a href="sharing-your-book.html#metadata-for-sharing"><i class="fa fa-check"></i><b>7.3</b> Metadata for sharing</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="chapter" data-level="8" data-path="presentación-1.html"><a href="presentación-1.html"><i class="fa fa-check"></i><b>8</b> Presentación</a></li>
+<li class="chapter" data-level="9" data-path="metodología.html"><a href="metodología.html"><i class="fa fa-check"></i><b>9</b> Metodología</a></li>
+<li class="chapter" data-level="10" data-path="flourish.html"><a href="flourish.html"><i class="fa fa-check"></i><b>10</b> Flourish</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="flourish.html"><a href="flourish.html#ejemplo-3"><i class="fa fa-check"></i><b>10.1</b> Ejemplo</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="power-bi.html"><a href="power-bi.html"><i class="fa fa-check"></i><b>11</b> Power BI</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="power-bi.html"><a href="power-bi.html#ejemplo-1-2"><i class="fa fa-check"></i><b>11.1</b> Ejemplo 1</a></li>
+<li class="chapter" data-level="11.2" data-path="power-bi.html"><a href="power-bi.html#ejemplo-2-2"><i class="fa fa-check"></i><b>11.2</b> Ejemplo 2</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="plataforma-r-studio.html"><a href="plataforma-r-studio.html"><i class="fa fa-check"></i><b>12</b> Plataforma R studio</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="plataforma-r-studio.html"><a href="plataforma-r-studio.html#definición-1"><i class="fa fa-check"></i><b>12.1</b> Definición</a></li>
+<li class="chapter" data-level="12.2" data-path="plataforma-r-studio.html"><a href="plataforma-r-studio.html#ejemplo-1-3"><i class="fa fa-check"></i><b>12.2</b> Ejemplo 1</a></li>
+<li class="chapter" data-level="12.3" data-path="plataforma-r-studio.html"><a href="plataforma-r-studio.html#ejemplo-2-3"><i class="fa fa-check"></i><b>12.3</b> Ejemplo 2</a></li>
+<li class="chapter" data-level="12.4" data-path="plataforma-r-studio.html"><a href="plataforma-r-studio.html#ejemplo-con-minería-de-texto"><i class="fa fa-check"></i><b>12.4</b> Ejemplo con minería de texto</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Guía Didáctica de Finanzas</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="power-bi" class="section level1 hasAnchor" number="11">
+<h1><span class="header-section-number">Chapter 11</span> Power BI<a href="power-bi.html#power-bi" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Definición</p>
+<div id="ejemplo-1-2" class="section level2 hasAnchor" number="11.1">
+<h2><span class="header-section-number">11.1</span> Ejemplo 1<a href="power-bi.html#ejemplo-1-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>Objetivos:</strong>
+• Desarrollar un Dashboard interactivo que facilite y sintetice la comprensión de un conjunto de datos.
+• Extraer conclusiones relevantes de los datos mediante la creación de visualizaciones efectivas.</p>
+<p><strong>Actividades requeridas:</strong>
+1. Recopilación de datos:
+o Obtener una base de datos de Kaggle (<a href="https://www.kaggle.com/datasets" class="uri">https://www.kaggle.com/datasets</a>) o utilizar datos de su proyecto de investigación.</p>
+<p>Se extrajo datos del índice de Precios al Consumidor (IPC), mismo que es un indicador mensual, nacional y para nueve ciudades, que mide los cambios en el tiempo del nivel general de los precios, correspondientes al consumo final de bienes y servicios de los hogares de estratos de ingreso: alto, medio y bajo, residentes en el área urbana del país.</p>
+<img src="kag1.jpg" alt="imagen 1" style="width: 70%;"/>
+<center>
+</center>
+<img src="kag2.jpg" alt="imagen 1" style="width: 70%;"/>
+<center>
+</center>
+<p>La Canasta Familiar Básica (CFB) es un conjunto de bienes y servicios que son imprescindibles para satisfacer las necesidades básicas del hogar tipo compuesto por 4 miembros con 1,6 perceptores de ingresos, que ganan la remuneración básica unificada. Calcular el costo de esta canasta es necesario para el análisis de la relación entre remuneraciones e inflación. Los datos son obtenidos de Kaggle (2024) en base a la información proporcionada por el Instituto Nacional de Estadísticas y Cesos (INEC), donde recopila 384 observaciones.</p>
+<ol start="2" style="list-style-type: decimal">
+<li>Proceso ETL (Extracción, Transformación y Carga):
+Prepararamos los datos para su análisis mediante limpieza, transformación y carga en Power BI.</li>
+</ol>
+<img src="kag3.jpg" alt="imagen 1" style="width: 70%;"/>
+<center>
+</center>
+<p>Una vez realizado el proceso ETL, en la Figura 1 se puede observar el ingreso familiar mensual por año, durante este periodo el promedio es de $73,52, sin duda esto se ocasiona por la falta de empleos estables que no les permiten acceder a las personas a salarios básicos, en cambio el ingreso familiar mensual promedio máximo es de $79333.</p>
+<p>Cabe importante mencionar que el SBU (salario básico unificado) en el 2000 fue de $56,65, en el 2005 de $150,00, desde el 2010 hasta el 2016 el alza del SBU ha sido en promedio de $20 dólares por año, en el año 2020 y 2021 el valor se congeló en $400,00 a causa de la emergencia sanitaria por el COVID, en el 2022 y 2023 se realizó el alza de $25,00 dólares y para el 2024 el alza de este rubro ha decrecido con respecto al año anterior en apenas $10.00. Sin embargo, hay personas que perciben salarios sumamente elevados a los ingresos promedio del país, siendo recibido por el quintil más alto, aumentando la desigualdad.</p>
+<strong>Figura 1.</strong>
+Ingreso familiar mensual por año
+<img src="kag4.jpg" alt="imagen 1" style="width: 70%;"/>
+<center>
+</center>
+<p>En la Figura 2 se analiza el promedio de las fluctuaciones de los costos de la canasta básica mensual por año, el costo mínimo de la canasta básica en este periodo es de $128,26 y el costo máximo es de $753,62, desde el mes de julio de 2000 se calcula el ingreso familiar con un hogar tipo de cuatro miembros, no obstante, la línea de color de blanco muestra el ingreso, hasta el 2015 el ingreso que percibían era mayor al costo de la canasta básica, de ahí en adelante el ingreso no avanza a cubrir la canasta básica.</p>
+<strong>Figura 2.</strong>
+Costo de la canasta básica mensual por año
+<img src="kag5.jpg" alt="imagen 1" style="width: 70%;"/>
+<center>
+</center>
+<p>La Figura 3 muestra el promedio de la canasta básica por año de acuerdo al gobierno de turno, podemos considerar que en el gobierno de León Febres Cordero el promedio de canasta básica fue de $183,00 dólares y en el de Guillermo Lasso el costo fue de $724,00, existen varios factores que inciden en el incremento del precio de la canasta básica, siendo uno de los principales la alta dependencia a las materias primas, bienes intermedios, además problemas económicos, políticos y sociales.</p>
+<strong>Figura 3.</strong>
+Promedio de la canasta básica por año de acuerdo al gobierno de turno
+<img src="kag6.jpg" alt="imagen 1" style="width: 70%;"/>
+<center>
+</center>
+<p>En la Figura 4 se evidencia el ingreso promedio por cada mes en función del porcentaje general, donde febrero, marzo y abril tienen los porcentajes más alto con 8,69; 8,66; y 8,52%, se puede justificar con el pago de utilidades que las empresas deben cancelar en ese mes, y porque se registra en la Costa el pago de la bonificación del décimo cuarto sueldo.</p>
+<strong>Figura 4.</strong>
+Ingreso promedio mensual
+<img src="kag7.jpg" alt="imagen 1" style="width: 70%;"/>
+<center>
+</center>
+<p>En la Figura 5 se presenta la restricción de consumo, es decir, cuanto pueden comprar con el ingreso que consumen, esto se ha realizado por meses, donde se observa que en todos los meses tenemos restricción de consumo, las familias ecuatorianas deben limitar sus gastos y satisfacer únicamente las necesidades prioritarias; en este caso se presenta la mayor restricción en septiembre, esto es debido a las temporadas escolares en la Sierra que les permite destinar sus ingresos a la compra de útiles escolares; y luego le sigue agosto, que se justifica por la razón antes detallada. Por tanto, se recomienda que las familias de nuestro país busquen nuevas fuentes de ingreso para no depender únicamente de un SBU.</p>
+<strong>Figura 5.</strong>
+Restricción de consumo promedio por mes
+<img src="kag8.jpg" alt="imagen 1" style="width: 70%;"/>
+<center>
+</center>
+<p>En la Figura 6 mostramos la relación del precio promedio de la canasta básico con el ingreso mensual familiar de acuerdo a cada mes, donde gráficamente se observa que de forma general, el precio promedio de la canasta básica supera al ingreso promedio de las familias ecuatorianas, donde marzo el único mes donde hay un superávit del ingreso, y esto se explica por el pago de utilidades a empleados del sector privado, y para enero ocurre lo mismo por el pago de décimos en el mes de diciembre.</p>
+<strong>Figura 6.</strong>
+Comparación del precio promedio de la canasta básica con el ingreso mensual
+<img src="kag9.jpg" alt="imagen 1" style="width: 70%;"/>
+<center>
+</center>
+<p>Finalmente, se presenta la Figura 7 se muestra como el precio promedio de la canasta básica se explica por el nivel de ingresos, gobierno de turno y de acuerdo al mes. En este sentido, el gobierno de Lenin Moreno explica en mayor medida el aumento de la canasta básica específicamente en un aumento de $314,10; seguido tenemos el gobierno de Rafael Correa que explica en un incremento de $169,50, y finalmente el ingreso en $152,80.</p>
+<strong>Figura 7.</strong>
+Ingreso familiar influyente por gobierno
+<img src="kag10.jpg" alt="imagen 1" style="width: 70%;"/>
+<center>
+</center>
+<p><strong>Evidencia del proceso antes detallado:</strong></p>
+<img src="eviKg1.jpg" alt="imagen 1" style="width: 70%;"/>
+<center>
+</center>
+<img src="eviKg2.jpg" alt="imagen 1" style="width: 70%;"/>
+<center>
+</center>
+<img src="eviKg3.jpg" alt="imagen 1" style="width: 70%;"/>
+<center>
+</center>
+<img src="eviKg4.jpg" alt="imagen 1" style="width: 70%;"/>
+<center>
+</center>
+<img src="eviKg5.jpg" alt="imagen 1" style="width: 70%;"/>
+<center>
+</center>
+<img src="eviKg6.jpg" alt="imagen 1" style="width: 70%;"/>
+<center>
+</center>
+</div>
+<div id="ejemplo-2-2" class="section level2 hasAnchor" number="11.2">
+<h2><span class="header-section-number">11.2</span> Ejemplo 2<a href="power-bi.html#ejemplo-2-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ol style="list-style-type: decimal">
+<li>Abre el archivo de Excel titulado “VENTAS GENERALES_TAREA”.</li>
+<li>Importe todas las hojas (Ventas, Sucursal, Vendedor, Tipo, Producto y Categoría).</li>
+<li>Limpia las bases originales.</li>
+</ol>
+<img src="pb1.jpg" alt="imagen 1" style="width: 70%;"/>
+<center>
+</center>
+<p>Se procede a limpiar la base para continuar con el respectivo análisis</p>
+<img src="pb2.jpg" alt="imagen 1" style="width: 70%;"/>
+<center>
+</center>
+<img src="pb3.jpg" alt="imagen 1" style="width: 70%;"/>
+<center>
+</center>
+<ol start="4" style="list-style-type: decimal">
+<li>Crea una nueva consulta denominada “VENTAS GENERALES” con las siguientes columnas: Factura, Fecha, Sucursal, Nombre de la ciudad, Vendedor, Tipo de producto, Descripción del tipo, Producto, Categoría y Venta.</li>
+</ol>
+<img src="pb4.jpg" alt="imagen 1" style="width: 70%;"/>
+<center>
+</center>
+<ol start="5" style="list-style-type: decimal">
+<li>Crea un Parámetro llamado “Porcentaje” con un valor del 2% (0,02).</li>
+</ol>
+<img src="pb5.jpg" alt="imagen 1" style="width: 70%;"/>
+<center>
+</center>
+<ol start="6" style="list-style-type: decimal">
+<li>Establece una columna personalizada llamada “Comisión a cobrar” donde se calcule la Venta multiplicada por el Porcentaje.</li>
+</ol>
+<img src="pb6.jpg" alt="imagen 1" style="width: 70%;"/>
+<center>
+</center>
+<ol start="7" style="list-style-type: decimal">
+<li>Genera una nueva tabla que agrupe por vendedor y que se resuma por la suma de las Ventas_tot1 llamada “Agrupar_1”</li>
+</ol>
+<img src="pb7.jpg" alt="imagen 1" style="width: 70%;"/>
+<center>
+</center>
+<img src="pb8.jpg" alt="imagen 1" style="width: 70%;"/>
+<center>
+</center>
+<img src="pb9.jpg" alt="imagen 1" style="width: 70%;"/>
+<center>
+</center>
+<ol start="8" style="list-style-type: decimal">
+<li>Genera una nueva tabla que agrupe por vendedor y producto y además que se resuma por la suma de las Ventas_tot2; llamada “Agrupar_2”</li>
+</ol>
+<img src="pb10.jpg" alt="imagen 1" style="width: 70%;"/>
+<center>
+</center>
+<img src="pb11.jpg" alt="imagen 1" style="width: 70%;"/>
+<center>
+</center>
+<ol start="9" style="list-style-type: decimal">
+<li><p>Cierra y aplica los cambios para guardarlos y salir del editor de Power Query.</p></li>
+<li><p>Revisa las relaciones con la tabla VENTAS GENERALES. Si falta alguna, agrégala. Si el programa estableció alguna relación directa, revísala y corrígela si es necesario.</p></li>
+</ol>
+<img src="pb12.jpg" alt="imagen 1" style="width: 70%;"/>
+<center>
+</center>
+<ol start="11" style="list-style-type: decimal">
+<li>Crea una “Nueva Columna” llamada “Descuento” donde se calcule el 1% de las Ventas (ventas * 0,01).</li>
+</ol>
+<img src="pb13.jpg" alt="imagen 1" style="width: 70%;"/>
+<center>
+</center>
+<img src="pb14.jpg" alt="imagen 1" style="width: 70%;"/>
+<center>
+</center>
+<img src="pb15.jpg" alt="imagen 1" style="width: 70%;"/>
+<center>
+</center>
+<ol start="12" style="list-style-type: decimal">
+<li>Crea una tabla calendario utilizando funciones basadas en la columna “Fecha” de la tabla VENTAS GENERALES. Nota: La tabla calendario debe contener año, mes, mes en texto, y día en texto.</li>
+</ol>
+<img src="pb16.jpg" alt="imagen 1" style="width: 70%;"/>
+<center>
+</center>
+<img src="pb17.jpg" alt="imagen 1" style="width: 70%;"/>
+<center>
+</center>
+<img src="pb18.jpg" alt="imagen 1" style="width: 70%;"/>
+<center>
+</center>
+<img src="pb19.jpg" alt="imagen 1" style="width: 70%;"/>
+<center>
+</center>
+<img src="pb20.jpg" alt="imagen 1" style="width: 70%;"/>
+<center>
+</center>
+<img src="pb21.jpg" alt="imagen 1" style="width: 70%;"/>
+<center>
+</center>
+<ol start="13" style="list-style-type: decimal">
+<li>Debes crear medidas para calcular: a) Ventas totales en dólares, b) Conteo de ventas.</li>
+</ol>
+<img src="pb22.jpg" alt="imagen 1" style="width: 70%;"/>
+<center>
+</center>
+<img src="pb23.jpg" alt="imagen 1" style="width: 70%;"/>
+<center>
+</center>
+<img src="pb24.jpg" alt="imagen 1" style="width: 70%;"/>
+<center>
+</center>
+<ol start="14" style="list-style-type: decimal">
+<li>Desarrolla un informe que conste de 5 páginas:</li>
+</ol>
+<p>14.1. Tres hojas de detalle: Ventas por sucursal (Mapa: quitar título al mapa y leyenda centrada a la izquierda), Ventas por vendedor (Columnas agrupadas: grafique la línea de promedio), Ventas por producto (Barras: grafique la línea promedio); Ventas por fecha (proyecta las ventas); Haz un análisis de componentes principales (Ventas en función de ciudad, producto, vendedor). Utiliza herramientas que permitan visualizar adecuadamente la información, con visualizaciones diferentes y agregando métricas pertinentes.</p>
+<p>14.2. Una hoja dashboard que aplique tarjetas, filtros y otros visualizadores que proyecten la información más relevante.</p>
+<p>14.3. Una hoja índice para establecer la relación entre las diferentes hojas.</p>
+<p>14.4. Analiza la información.</p>
+<img src="pb25.jpg" alt="imagen 1" style="width: 70%;"/>
+<center>
+</center>
+<p>En la Figura 1 podemos observar el promedio de ventas por vendedor, José lidera las ventas con un promedio de $735 mil, en segundo lugar, está Joel con $701 mil, posterior se ubica Saúl con $691; en contraste los vendedores con ventas menores del promedio de ventas son Andrea, Mariana y Mauricio con menos de $662 mil.</p>
+<p><strong>Figura 1. Ventas por vendedor</strong></p>
+<img src="pb26.jpg" alt="imagen 1" style="width: 70%;"/>
+<center>
+</center>
+<p>En la Figura 2 se analiza el promedio de ventas por producto, claramente se puede percibir que el grupo de vinos son los productos con más ventas ocupando los primeros lugares de la lista de productos, el vino 5 tiene ventas promedias de $7.580 mil, y contrariamente el producto con menos ventas son los tacos arrachera con ventas de $790 mil muy por debajo del promedio de ventas.</p>
+<strong>Figura 2. Promedio de venta por producto</strong>
+<img src="pb27.jpg" alt="imagen 1" style="width: 70%;"/>
+<center>
+</center>
+<p>En la Figura 3 se observa el promedio de ventas por mes, verificando que en el mes de julio las ventas son superiores lo que podría darse por varias razones como que muchos trabajadores reciben una bonificación a finales del mes de junio teniendo más dinero disponible para gastar en el mes de julio, adicional en el mes de julio se celebra la Feria de las Flores en Medellín siendo un evento muy concurrido por turistas. El mes de abril es el segundo en la lista que refleja ventas más altas lo cual podría ser por la Semana Santa, puesto que, esta fecha es una de las festividades mas importantes en Colombia, adicional en el mes de abril inicia el cambio de temporada de primavera/verano lo que puede llevar a un incremento en la compra de ropa y artículos relacionados con la nueva estación.</p>
+<p>En cambio, se observa que el mes de enero tiene las ventas más bajas lo cual podría ser por los gastos de las festividades de Navidad y Año Nuevo muchas de las personas tienen menos disponibilidad de dinero, adicional en el mes de enero los estudiantes están de vacaciones lo que podría reflejar una reducción en el consumo regular.</p>
+<strong>Figura 3. Promedio de ventas por mes</strong>
+<img src="pb28.jpg" alt="imagen 1" style="width: 70%;"/>
+<center>
+</center>
+<p>En la Figura 4 se analizará la variable promedio de venta desde categoría y producto, en el cual se reflejará que la categoría mas vendida es Vinos, indicando que esta categoría se vende 5.45 millones más en comparación del resto de los valores de Categorías. Con lo cual se puede indicar que la Categoría Vinos si es un elemento clave en el promedio de ventas, esto se puede dar puesto que los colombianos han desarrollado un gusto creciente por el vino, el vino se ha integrado mas en la vida cotidiana y en celebraciones, con lo que ha aumentado la opción de ser una bebida exclusiva; además en Colombia se celebran cada vez mas eventos relacionados con el vino como ferias, festivales y catas.</p>
+<strong>Figura 5. Elementos influyentes clave en el aumento de ventas</strong>
+<img src="pb29.jpg" alt="imagen 1" style="width: 70%;"/>
+<center>
+</center>
+<strong>Portada principal del dashboard</strong>
+<img src="pb30.jpg" alt="imagen 1" style="width: 70%;"/>
+<center>
+</center>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="flourish.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="plataforma-r-studio.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/Guia_Finanzas_version1-2024.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
